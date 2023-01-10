@@ -4,3 +4,21 @@ int main()
     int num=12,pos=1;
     (num>>pos&1)?printf("set"):printf("unset");
 }
+
+
+#include<stdio.h>
+int nth(int num,int pos)
+{
+(num>>pos-1&1)?printf("set"):printf("unset");
+}
+int main()
+{
+    int num;
+    printf("enter the number:");
+    scanf("%d",&num);
+    int pos;
+    printf("enter the pos:");
+    scanf("%d",&pos);
+    int (*fptr)(int ,int)=nth;
+    fptr(num,pos);
+}
