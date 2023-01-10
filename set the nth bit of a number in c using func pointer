@@ -1,0 +1,22 @@
+#include<stdio.h>
+int nth(int num,int pos)
+{
+    int k=0;
+k=(num|1<< pos-1);
+printf("%d",k);
+}
+int main()
+{
+    int num;
+    printf("enter the number:");
+    scanf("%d",&num);
+    int pos;
+    printf("enter the pos:");
+    scanf("%d",&pos);
+    int (*fptr)(int ,int)=nth;
+    fptr(num,pos);
+}
+logic:
+num and pos which we want do set the position in a particular pos and do with logical or to get it and we doing with 1.
+
+num | 1<<pos-1.
