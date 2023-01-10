@@ -1,0 +1,21 @@
+#include<stdio.h>
+#define N sizeof(int)*8
+int hth(int num)
+{
+    int i=0,c=0,k=0;
+    for(i=0;i<N;i++)
+    {
+    if(num>>i-1&1)
+    c=i;
+    }
+    (c>=0)?printf(" the highest set bit:%d",c):printf("not a highest set bit");
+}
+int main()
+{
+    int num;
+    printf("enter the number:");
+    scanf("%d",&num);
+    int (*fptr)(int)=hth;
+    fptr(num);
+}
+
