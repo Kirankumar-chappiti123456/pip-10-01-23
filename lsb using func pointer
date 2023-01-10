@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int num=157;
+    (num&1==1)?printf("lsb"):printf("not lsb");
+}
+output:
+lsb.
+
+
+using 32 bit.
+
+#include<stdio.h>
+#define L sizeof(int)*8
+int main()
+{
+    int num=,k1=0;
+    for(int i=0;i<L;i++)
+    {
+    k1=((num>>i&1)==1);
+    break;
+}
+(k1==1)?printf("lsb"):printf("not lsb");
+}
+output:lsb.
+
+
+logic:
+num&1==1
+here the num is 1 and the num doing with  AND operator  with "1" and it is equal to 1 it is lsb. 
