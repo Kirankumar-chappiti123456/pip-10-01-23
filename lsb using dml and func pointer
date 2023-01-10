@@ -49,6 +49,41 @@ int main()
    fptr(num);
 }
 
+using dynamic allocation:
+
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#define L sizeof(int)*8
+int lsb(int *num)
+{
+    int k1=0;
+    for(int i=0;i<L;i++)
+    {
+    k1=((*num)>>i&1==1);
+    break;
+}
+(k1==1)?printf("lsb"):printf("not lsb");
+}
+int main()
+{
+    int s;
+    printf("enter the size:");
+    scanf("%d",&s);
+    printf("enter the number:");
+   int *num;
+   num=(int*)malloc(s*sizeof(int));
+   for(int i=0;i<s;i++)
+   {
+       scanf("%d",num+i);
+   }
+ 
+   int (*fptr)(int *)=lsb;
+   fptr(num);
+}
+
 
 logic:
 num&1==1
