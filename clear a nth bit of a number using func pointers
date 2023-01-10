@@ -1,0 +1,18 @@
+#include<stdio.h>
+int nth(int num,int pos)
+{
+    int k=0;
+k=(num^1<< pos-1);
+printf("%d",k);
+}
+int main()
+{
+    int num;
+    printf("enter the number:");
+    scanf("%d",&num);
+    int pos;
+    printf("enter the pos:");
+    scanf("%d",&pos);
+    int (*fptr)(int ,int)=nth;
+    fptr(num,pos);
+}
