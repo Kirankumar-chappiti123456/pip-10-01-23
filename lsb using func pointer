@@ -25,6 +25,31 @@ int main()
 output:lsb.
 
 
+using func pointer:
+
+
+#include<stdio.h>
+#define L sizeof(int)*8
+int lsb(int num)
+{
+    int k1=0;
+    for(int i=0;i<L;i++)
+    {
+    k1=((num>>i&1)==1);
+    break;
+}
+(k1==1)?printf("lsb"):printf("not lsb");
+}
+int main()
+{
+   int num;
+   printf("enter the number:");
+   scanf("%d",&num);
+   int (*fptr)(int )=lsb;
+   fptr(num);
+}
+
+
 logic:
 num&1==1
 here the num is 1 and the num doing with  AND operator  with "1" and it is equal to 1 it is lsb. 
