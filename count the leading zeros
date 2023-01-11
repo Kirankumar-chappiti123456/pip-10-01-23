@@ -1,0 +1,27 @@
+#include<stdio.h>
+#define N sizeof(int)*8
+int fun(int num)
+{
+    int c=0,i=0;
+   int msb=(1<<N-1); 
+   for(i=0;i<N-1;i++)
+    {
+    if((num<<i)&msb)
+    {
+        break;
+    }
+    else
+    {
+        c++;
+    }
+    }
+    printf("%d\n",c);
+}
+int main()
+{
+    int num=12;
+    printf("enter the number:");
+    scanf("%d",&num);
+    int (*fptr)(int)=fun;
+    fptr(num);
+}
